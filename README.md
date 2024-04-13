@@ -18,6 +18,3 @@
 2. Navigate to the directory where the **Health_and_Fitness_Club_System.py** file is.
 3. Run the **Health_and_Fitness_Club_System.py** program by entering `py ./Health_and_Fitness_Club_System.py` command.
 4. Follow the instructions from the program (in the terminal).
-
-## Link to video:
-To be Added
