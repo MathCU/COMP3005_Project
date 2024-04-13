@@ -15,8 +15,8 @@
 
 ## To run the application (on Windows)
 1. Start **CDM** or **PowerShell**.
-2. Navigate to the directory where the **H&F_Club_System.py** file is.
-3. Run the **H&F_Club_System.py** program by entering `py ./H&F_Club_System.py` command.
+2. Navigate to the directory where the **Health_and_Fitness_Club_System.py** file is.
+3. Run the **Health_and_Fitness_Club_System.py** program by entering `py ./Health_and_Fitness_Club_System.py` command.
 4. Follow the instructions from the program (in the terminal).
 
 ## Link to video:
