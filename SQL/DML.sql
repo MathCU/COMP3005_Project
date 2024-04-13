@@ -6,14 +6,14 @@ VALUES
 
 INSERT INTO trainer (password, first_name, last_name, phone_number, email, street, home_number, postal_code)
 VALUES
-('TTrainn654', 'Penelope', 'Bright', '6139998888', 'Penelope.Bright@gmail.com', 'Sommerset', 10, 'G8R6U7'),
+('PB123', 'Penelope', 'Bright', '6139998888', 'Penelope.Bright@gmail.com', 'Sommerset', 10, 'G8R6U7'),
 ('Dudez332', 'Jaime', 'Shelton', '6136634859', 'Jaime.Shelton@gmail.com', 'Albert', 50, 'Y6T5R3'),
 ('ABC555', 'Solomon', 'Russell', '6134548989', 'Solomon.Russell@gmail.com', 'Slater', 30, 'Q9W8E7');
 
 INSERT INTO member (password, first_name, last_name, phone_number, email, street, home_number, postal_code, height, weight)
 VALUES
 ('Gym777', 'Frank', 'Mercado', '6131112222', 'Frank.Mercado@gmail.com', 'Bank', 1000, 'B6V4M3', 180, 90),
-('New987', 'Denise', 'Saunders', '6132359674', 'Denise.Saunders@gmail.com', 'Kent', 500, 'B6V1A1', 150, 50),
+('New987', 'Denise', 'Saunders', '6132359674', 'Denise.Saunders@gmail.com', 'Kent', 500, 'B6V1A1', 150, 60),
 ('ZZZ555', 'Christopher', 'Bowman', '6135558888', 'Christopher.Bowman@gmail.com', 'Lyon', 300, 'B6V9H8', 175, 80);
 
 INSERT INTO room (room_number)
@@ -23,14 +23,17 @@ VALUES
 ('A102'),
 ('B100'),
 ('B101'),
-('B102');
+('B102'),
+('C100'),
+('C101'),
+('C102');
 
 INSERT INTO equipment (bar_code, model, last_maintenance, room_number)
 VALUES
-('0000000001', 'Dumbbell 5kg', '2024-04-25', 'A100'),
-('0000000002', 'Squat Rack XPro', '2024-04-30', 'B100'),
-('0000000025', 'Yoga Mat Blue', '2024-03-31', 'A101'),
-('0000002354', 'Elastic Band - Medium', '2024-03-31', 'A101'),
+('0000000001', 'Dumbbell 5kg', '2024-04-25', 'B100'),
+('0000000202', 'Squat Rack XPro', '2024-04-30', 'A100'),
+('0000004025', 'Yoga Mat Blue', '2024-03-31', 'A101'),
+('0000002354', 'Elastic Band - Medium', '2024-03-31', 'A102'),
 ('0000000264', 'Treadmill Super', '2024-04-30', 'A100');
 
 INSERT INTO class (name, date, starting_time, ending_time, room_number, trainer_id, staff_id)
@@ -48,8 +51,14 @@ VALUES
 INSERT INTO availability (trainer_id, date_time)
 VALUES
 (1, '2024-05-03 11:00:00'),
-(1, '2024-05-03 11:30:00'),
-(2, '2024-05-04 10:00:00');
+(1, '2024-05-03 13:00:00'),
+(1, '2024-05-04 9:00:00'),
+(2, '2024-05-04 9:00:00'),
+(2, '2024-05-05 10:00:00'),
+(2, '2024-05-06 11:00:00'),
+(3, '2024-05-08 11:00:00'),
+(3, '2024-05-09 12:00:00'),
+(3, '2024-05-10 10:00:00');
 
 INSERT INTO private_session (trainer_id, member_id, date, starting_time, ending_time)
 VALUES
@@ -59,23 +68,35 @@ VALUES
 
 INSERT INTO fitness_goal (weight_goal, start_date, end_date, member_id)
 VALUES
-(170, '2024-05-01', '2024-05-31', 1),
-(140, '2024-05-01', '2024-05-31', 2),
-(165, '2024-05-01', '2024-05-31', 3);
+(85, '2024-05-01', '2024-05-31', 1),
+(80, '2024-06-01', '2024-06-30', 1),
+(55, '2024-05-01', '2024-05-31', 2),
+(75, '2024-05-01', '2024-05-31', 3);
 
 INSERT INTO exercise (exercise_name, type)
 VALUES
-('Squat', 'Leg Focus'),
-('Barbell Curl', 'Arm Focus'),
+('Squat', 'Leg'),
+('Bicep Curl', 'Arm'),
+('Row', 'Back'),
 ('Plank', 'Core'),
-('Deadlift', 'Leg Focus'),
-('Lunges', 'Leg Focus'),
-('Abs Crusher', 'Core');
+('Push-up', 'Chest'),
+('Deadlift', 'Leg'),
+('Hammer Curl', 'Arm'),
+('Pull-up', 'Back'),
+('Bridge', 'Core'),
+('Cable crossover', 'Chest'),
+('Lunges', 'Leg'),
+('Tricep dip', 'Arm'),
+('Abs Crusher', 'Core'),
+('Pull-down', 'Back'),
+('Bench press', 'Chest'),
+('Leg press', 'Leg');
 
 INSERT INTO routine (name, description, member_id)
 VALUES
 ('Leg Day', 'Leg Routine', 1),
-('Core Day', 'Core Routine', 2);
+('Core Day', 'Core Routine', 2),
+('Arms Day', 'Arms Routine', 3);
 
 INSERT INTO routine_exercise (routine_id, exercise_name)
 VALUES
@@ -83,10 +104,18 @@ VALUES
 (1, 'Deadlift'),
 (1, 'Lunges'),
 (2, 'Plank'),
-(2, 'Abs Crusher');
+(2, 'Bridge'),
+(2, 'Abs Crusher'),
+(3, 'Tricep dip'),
+(3, 'Bicep Curl'),
+(3, 'Hammer Curl');
 
 INSERT INTO achievement (member_id, achievement)
 VALUES
+(1, 'Started to go at the Gym!'),
+(1, 'Hit a new personal record!'),
+(2, 'Started to go at the Gym!'),
+(2, 'Getting stronger!'),
 (3, 'Started to go at the Gym!');
 
 INSERT INTO payment (date, amount, method, member_id, staff_id)
