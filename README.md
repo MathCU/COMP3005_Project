@@ -15,8 +15,8 @@
 
 ## To run the application (on Windows)
 1. Start **CDM** or **PowerShell**.
-2. Navigate to the directory where the **GymDatabaseApp.py** file is.
-3. Run the **GymDatabaseApp.py** program by entering `py ./GymDatabaseApp.py` command.
+2. Navigate to the directory where the **H&F Club System.py** file is.
+3. Run the **H&F Club System.py** program by entering `py ./H&F Club System.py` command.
 4. Follow the instructions from the program (in the terminal).
 
 ## Link to video:
